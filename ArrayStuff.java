@@ -1,7 +1,7 @@
 /*
- * Programmer:
- * Date:
- * Purpose:
+ * Programmer: Jennie Seo
+ * Date: October 21, 2020
+ * Purpose: Follows the instruction
  */
 
 import java.util.Scanner;
@@ -12,43 +12,32 @@ public class ArrayStuff {
         Scanner input = new Scanner(System.in);
 
         // PART A
+        int [] ages = new int [5];
 
-        // TODO: Create integer array called "ages" with length 5.
-
-
-        // TODO: Change the 3rd element of "ages" to be 18
-
-
-        // TODO: Change the first element of "ages" to be an integer entered by the user
+        ages[2] = 18;
+        
         System.err.println("Enter an integer:");
+        ages[0] = input.nextInt();
 
-
-        // TODO: Change the last element of "ages" to be the first element squared
-
-
-        // TODO: Print all of the elements of "ages", one per line
-
-
+        ages[4] = (int)Math.pow(ages[0], 2);
+        
+        for (int index = 0; index < 5; index++) {
+        	System.out.println(ages[index]);
+        }
 
         // PART B
+        String [] planets = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};        
 
-        // TODO: Create AND initialize an array called "planets" that holds the
-        // names of the planets in order from closest to the sun to farthest.
-        // NOTE: Pluto is NOT a planet.
+        System.out.println(planets[6].charAt(0));
 
-
-        // TODO: Print the first letter of the 7th planet from the sun
-
-
-        // TODO: Change the name of our planet to be a line of text that the user inputs
         System.err.println("What do you want to rename Earth to be?");
+        planets[2] = input.next();
 
+        planets[0] = planets[2].toUpperCase();
 
-        // TODO: Replace the first planet with the planet at index 2, but with all
-        // upper case letters.
-
-
-        // TODO: Print all of the elements of "planets" in reverse order.
-
+        for (int index = 7; index >= 0; index--) {
+        	System.out.println(planets[index]);
+        }
+        
     }
 }
